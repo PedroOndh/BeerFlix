@@ -1,6 +1,6 @@
 # BEERFLIX
 
-Web sobre cervezas basada en la información de una API. Consta de dos páginas:
+Web sobre cervezas basada en la información de una API. Consta de dos pantallas:
 
 * Una Home inicial donde podemos ver un listado de 10 cervezas y filtrar por palabras o por la fecha en la que se comenzó a fabricar.
 
