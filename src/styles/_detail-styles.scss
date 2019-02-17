@@ -1,0 +1,146 @@
+
+body.detail{
+
+    background: url('../images/wood.jpg');
+
+    main {
+
+        margin: 0 5%;
+
+        article {
+            background: white;
+            border-radius: $border-radius;
+            box-shadow: $card-shadow;
+            padding: 3rem 10%;
+            margin: 3rem 0;
+        }
+
+        @include tablet {
+        }
+    
+        @include desktop {
+
+            margin: 6rem 15% 3rem;
+
+            article {
+                display: grid;
+                grid-gap: 2rem;
+                grid-template-columns: 30% 1fr;
+                grid-template-rows: 3rem 1fr;
+        
+                .detail-image {
+                    grid-column: 1 / 2;
+                    grid-row: 1 / 3;
+                    height: 50vh;
+                }
+
+                header {
+                    grid-column: 2 / 3;
+                    grid-row: 1 / 2;
+                }
+        
+                .detail-text {
+                    grid-row: 2 / 3;
+                    grid-column: 2 / 3;
+                    margin-bottom: 1rem;
+                }
+            }
+            
+        }
+
+        .detail-image {
+            height: 50vh;
+            text-align: center;
+            margin: 1rem 0;
+            padding: 1rem;
+            background: white;
+    
+            img {
+                height: 100%;
+                width: auto;
+            }
+        }
+
+        header {
+            font-size: $title-font-size;
+            color: $black;
+            font-weight: bold;
+            margin: 1rem 0;
+        }
+    
+        .detail-text{
+            background: white;
+            margin-bottom: 2rem;
+            color: $black;
+
+            .detail-brewed{
+                margin: 1rem 0;
+            }
+
+            .detail-price{
+                margin: 1rem 0;
+                text-align: right;
+                font-weight: bold;
+                font-size: $price-font-size;
+            }
+
+            .detail-excerpt{
+                margin: 3rem 0 1rem;
+                text-align: justify;
+            }
+
+            .detail-likes{
+                margin: 1rem 0;
+                display: flex;
+                justify-content: flex-end;
+                font-weight: bold;
+                cursor: pointer;
+
+                &.liked i {
+                    color: $secondary-color;
+                }
+
+                .detail-number-likes{
+                    margin: 0 0.5rem;
+                }
+            }
+
+            .comment-input {
+
+                text-align: right;
+                textarea {
+                    width: 100%;
+                    border: unset;
+                    padding: 1rem;
+                    box-shadow: $inset-shadow;
+                    border-radius: $border-radius;
+                    resize: none;
+
+                    &:focus{
+                        outline: none;
+                    }
+                }
+
+                button {
+                    cursor: pointer;
+                    background: $secondary-color;
+                    border: none;
+                    text-transform: uppercase;
+                    font-weight: bold;
+                    padding: 0.5rem 1rem;
+                    margin: 1rem;
+                    border-radius: $border-radius;
+                    box-shadow: $shadow;
+                }
+            }
+
+            .comment-wrapper .comment{
+                background: $main-color;
+                padding: 1rem;
+                margin: 1rem 0;
+                border-radius: $border-radius;
+                box-shadow: $card-shadow;
+            }
+        }
+    }
+}

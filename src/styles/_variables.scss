@@ -1,0 +1,40 @@
+$header-color: #FFBB6E;
+$main-color: #E1F7E6;
+$secondary-color: #A9E8DC;
+$background-color: #FFBB6E;
+$card-background: white;
+$black: #282F39;
+
+$main-font-size: 1rem;
+$title-font-size: 2rem;
+$price-font-size: 2.5rem;
+
+
+$border-radius: 5px;
+$shadow: 2px 2px 5px 0px rgba(28,28,28,0.5);
+$inset-shadow: inset 2px 2px 5px 0px rgba(28,28,28,0.5);
+$card-shadow: 0px 2px 5px 0px rgba(28,28,28,0.5);
+
+$tablet-width: 768px;
+$desktop-width: 1000px;
+$large-desktop-width: 1800px;
+
+
+@mixin tablet {
+    @media (min-width: #{$tablet-width}) {
+      @content;
+    }
+  }
+  
+  @mixin desktop {
+    @media (min-width: #{$desktop-width}) {
+      @content;
+    }
+  }
+  
+  @mixin largeDesktop {
+    @media (min-width: #{$large-desktop-width}) {
+      @content;
+    }
+  }
+  

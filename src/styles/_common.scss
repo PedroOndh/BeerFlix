@@ -1,0 +1,40 @@
+* {
+    font-family: 'Roboto', sans-serif;
+    box-sizing: border-box;
+}
+
+header.main-header {
+    background: $header-color;
+    padding: 1rem;
+    box-shadow: 2px 2px 5px 0px rgba(28,28,28,0.5);
+
+    overflow: hidden;
+    position: relative;
+
+
+    .navbar-top{
+
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 1rem 0;
+        position: relative;
+        z-index: 1;
+
+
+        .navbar-logo{
+    
+            a {
+                text-decoration: none;
+                color: black;
+                font-weight: bold;
+    
+                &:focus {
+                    color: black;
+                }
+            }
+        }
+
+    }
+
+}

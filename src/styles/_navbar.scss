@@ -1,0 +1,138 @@
+header.main-header {
+
+    .app-navbar{
+
+        
+
+        .navbar-background-container{
+            width: 100vw;
+            min-height: 320px;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 0;
+            display: flex;
+            justify-content: center;
+            align-content: center;
+
+            img{
+                max-width: 100%;
+                min-height: 100%;
+                object-fit: cover;
+            }
+        }
+    }
+
+    .navbar-top{
+
+        .navbar-logo a {
+            color: white;
+        }
+    
+        .navbar-icon i {
+
+            color: white;
+
+            &.fa-bars {
+                display: flex;
+            }
+
+            &.fa-times {
+                display: none;
+            }
+            
+        }
+    }
+
+    .navbar-bottom {
+
+        display: none;
+        position: relative;
+        z-index: 1;
+
+        input {
+            border: none;
+            border-radius: $border-radius;
+            padding: 0.5rem 1rem;
+            box-shadow: $inset-shadow;
+        }
+
+        button {
+            padding: 0.5rem 1rem;
+            text-transform: uppercase;
+            font-weight: bold;
+            border: none;
+            background: $secondary-color;
+            cursor: pointer;
+            border-radius: $border-radius;
+            box-shadow: $shadow;
+        }
+
+        .search-filter-container {
+            padding: 1rem 0;
+            .search-filter-input {
+                display: flex;
+                justify-content: space-between;
+            }
+        }
+
+        .date-filter-container {
+
+            p {
+                font-weight: bold;
+                color: white;
+                margin-bottom: 1rem;
+            }
+
+            .date-buttons {
+                display: flex;
+                flex-wrap: wrap;
+
+                .date-button {
+                    padding: 0.5rem;
+                    margin: 0.5rem;
+                    cursor: pointer;
+                    border-radius: $border-radius;
+                    background: $secondary-color;
+                    box-shadow: $shadow;
+                }
+            }
+        }
+    }
+
+    .app-navbar.open {
+
+        .navbar-top {
+            .fa-bars {
+                display: none;
+            }
+
+            .fa-times {
+                display: flex;
+            }
+        }
+
+        .navbar-bottom {
+            display: block;
+        }
+    }
+
+    @include desktop {
+        .app-navbar .navbar-top .navbar-icon {
+            .fa-bars, .fa-times {
+                display: none;
+            }
+        }
+        .app-navbar .navbar-bottom {
+            display: block;
+            width: 30%;
+            margin: 0 0 0 auto;
+
+            input {
+                width: 70%;
+            }
+        }
+    }
+
+}
