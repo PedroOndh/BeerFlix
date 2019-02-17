@@ -45,5 +45,18 @@ Los archivos Javascript sirven para los siguientes fines:
 
 ## Observaciones
 
+* Para que html-loader tuviera en cuenta los diferentes source de picture y añadiese las imagenes utilizadas a la carpeta dist he tenido que editar un archivo de este mismo, cambiando en ./node_modules/html-loader/index.html, la linea 29:
+
+```shell
+ var attributes = ["img:src"];
+ ```
+
+ por 
+
+ ```shell
+ var attributes = ["img:src","source:srcset"];
+ ```
+
+
 * Al entrar en el Home la página busca las fechas de las cervezas en la base de datos e imprime los botones de fecha en el navbar con esta información, dado que la velocidad de respuesta de la API es algo larga podría interesar en un futuro, si no se mejorara la velocidad de carga, eliminar o editar esta funcionalidad.
 

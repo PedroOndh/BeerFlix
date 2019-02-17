@@ -1,13 +1,11 @@
 <navbar id="navbar" class="app-navbar">
         <div class="navbar-background-container">
           <picture>
-              <source srcset="
-                  ../images/beer-400.jpg 400w,
-                  ../images/beer-600.jpg 600w,
-                  ../images/beer-1200.jpg 1200w,
-                  ../images/beer-2000.jpg 2000w,
-                ">
-                <img src="../images/beer-2000.jpg" alt="beerflix">
+              <source srcset="../images/beer-2000.jpg" media="(min-width: 1200px)">
+              <source srcset="../images/beer-1200.jpg" media="(min-width: 600px)">
+              <source srcset="../images/beer-600.jpg" media="(min-width: 400px)">
+              <source srcset="../images/beer-400.jpg">
+              <img src="../images/beer-2000.jpg" alt="beerflix">
           </picture>
         </div>
         <div class="navbar-top">
